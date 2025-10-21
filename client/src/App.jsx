@@ -1,12 +1,15 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import { Routes, Route } from 'react-router-dom';
 
-const APP=() =>{
+export default function App() {
   return (
-    <div>
-       <Navbar/>
-    </div>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<div className="p-6">Home</div>} />
+        <Route path="/filtration" element={<div className="p-6">Filtration page</div>} />
+        <Route path="/my-bookings" element={<div className="p-6">My bookings</div>} />
+      </Routes>
+    </>
+  );
 }
-
-export default APP
